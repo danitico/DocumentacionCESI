@@ -1,0 +1,526 @@
+ab -c 5 -n 20  http://cesi.westeurope.cloudapp.azure.com/index2.jsp
+----------------------------------------------------PRUEBA 1------------------------------------------------------------
+11:55:57
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient).....done
+
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /index2.jsp
+Document Length:        623428 bytes
+
+Concurrency Level:      5
+Time taken for tests:   111.201 seconds
+Complete requests:      20
+Failed requests:        1
+   (Connect: 0, Receive: 0, Length: 1, Exceptions: 0)
+Total transferred:      12472399 bytes
+HTML transferred:       12468559 bytes
+Requests per second:    0.18 [#/sec] (mean)
+Time per request:       27800.182 [ms] (mean)
+Time per request:       5560.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          109.53 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53   57   9.6     53      88
+Processing: 17948 26668 5855.1  26608   40317
+Waiting:    17462 25970 5876.1  25777   39427
+Total:      18001 26725 5852.9  26661   40373
+
+Percentage of the requests served within a certain time (ms)
+  50%  26661
+  66%  27176
+  75%  29421
+  80%  32322
+  90%  36828
+  95%  40373
+  98%  40373
+  99%  40373
+ 100%  40373 (longest request)
+----------------------------------------------------PRUEBA 2------------------------------------------------------------
+11:57:49
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient).....done
+
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /index2.jsp
+Document Length:        623428 bytes
+
+Concurrency Level:      5
+Time taken for tests:   110.034 seconds
+Complete requests:      20
+Failed requests:        2
+   (Connect: 0, Receive: 0, Length: 2, Exceptions: 0)
+Total transferred:      12472397 bytes
+HTML transferred:       12468557 bytes
+Requests per second:    0.18 [#/sec] (mean)
+Time per request:       27508.504 [ms] (mean)
+Time per request:       5501.701 [ms] (mean, across all concurrent requests)
+Transfer rate:          110.69 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53   54   1.1     53      56
+Processing: 20157 26170 4808.3  25229   40472
+Waiting:    19359 25681 4766.2  24838   39693
+Total:      20210 26224 4808.6  25285   40528
+
+Percentage of the requests served within a certain time (ms)
+  50%  25285
+  66%  28729
+  75%  29097
+  80%  30213
+  90%  30775
+  95%  40528
+  98%  40528
+  99%  40528
+ 100%  40528 (longest request)
+----------------------------------------------------PRUEBA 3------------------------------------------------------------
+11:59:39
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient).....done
+
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /index2.jsp
+Document Length:        623428 bytes
+
+Concurrency Level:      5
+Time taken for tests:   109.188 seconds
+Complete requests:      20
+Failed requests:        1
+   (Connect: 0, Receive: 0, Length: 1, Exceptions: 0)
+Total transferred:      12472399 bytes
+HTML transferred:       12468559 bytes
+Requests per second:    0.18 [#/sec] (mean)
+Time per request:       27296.960 [ms] (mean)
+Time per request:       5459.392 [ms] (mean, across all concurrent requests)
+Transfer rate:          111.55 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53   61  24.3     56     164
+Processing: 12390 26110 6513.8  26164   37310
+Waiting:    11997 25574 6397.3  25764   36166
+Total:      12446 26171 6520.7  26221   37366
+
+Percentage of the requests served within a certain time (ms)
+  50%  26221
+  66%  27822
+  75%  31296
+  80%  31941
+  90%  37202
+  95%  37366
+  98%  37366
+  99%  37366
+ 100%  37366 (longest request)
+----------------------------------------------------PRUEBA 4------------------------------------------------------------
+12:01:28
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient).....done
+
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /index2.jsp
+Document Length:        623428 bytes
+
+Concurrency Level:      5
+Time taken for tests:   109.047 seconds
+Complete requests:      20
+Failed requests:        1
+   (Connect: 0, Receive: 0, Length: 1, Exceptions: 0)
+Total transferred:      12472399 bytes
+HTML transferred:       12468559 bytes
+Requests per second:    0.18 [#/sec] (mean)
+Time per request:       27261.818 [ms] (mean)
+Time per request:       5452.364 [ms] (mean, across all concurrent requests)
+Transfer rate:          111.70 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53   54   1.3     53      56
+Processing: 14368 25881 5885.2  26341   41119
+Waiting:    13652 25399 5860.1  25953   40733
+Total:      14424 25935 5884.6  26395   41172
+
+Percentage of the requests served within a certain time (ms)
+  50%  26395
+  66%  27408
+  75%  29338
+  80%  31004
+  90%  33282
+  95%  41172
+  98%  41172
+  99%  41172
+ 100%  41172 (longest request)
+----------------------------------------------------PRUEBA 5------------------------------------------------------------
+12:03:17
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient).....done
+
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /index2.jsp
+Document Length:        623428 bytes
+
+Concurrency Level:      5
+Time taken for tests:   106.575 seconds
+Complete requests:      20
+Failed requests:        3
+   (Connect: 0, Receive: 0, Length: 3, Exceptions: 0)
+Total transferred:      12472397 bytes
+HTML transferred:       12468557 bytes
+Requests per second:    0.19 [#/sec] (mean)
+Time per request:       26643.844 [ms] (mean)
+Time per request:       5328.769 [ms] (mean, across all concurrent requests)
+Transfer rate:          114.29 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53   54   1.1     53      56
+Processing: 15831 25698 5991.1  26117   38474
+Waiting:    15170 25023 5989.6  25454   37810
+Total:      15884 25752 5991.3  26170   38527
+
+Percentage of the requests served within a certain time (ms)
+  50%  26170
+  66%  27877
+  75%  28537
+  80%  30908
+  90%  34076
+  95%  38527
+  98%  38527
+  99%  38527
+ 100%  38527 (longest request)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ab -c 1 -n 10  http://cesi.westeurope.cloudapp.azure.com/index2.jsp
+----------------------------------------------------PRUEBA 1------------------------------------------------------------
+12:05:04
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient).....done
+
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /index2.jsp
+Document Length:        623427 bytes
+
+Concurrency Level:      1
+Time taken for tests:   57.330 seconds
+Complete requests:      10
+Failed requests:        1
+   (Connect: 0, Receive: 0, Length: 1, Exceptions: 0)
+Total transferred:      6236189 bytes
+HTML transferred:       6234269 bytes
+Requests per second:    0.17 [#/sec] (mean)
+Time per request:       5732.952 [ms] (mean)
+Time per request:       5732.952 [ms] (mean, across all concurrent requests)
+Transfer rate:          106.23 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53   55   1.6     54      58
+Processing:  5357 5678 203.7   5686    5997
+Waiting:     4693 5000 200.8   5020    5308
+Total:       5410 5733 204.3   5740    6052
+
+Percentage of the requests served within a certain time (ms)
+  50%   5740
+  66%   5798
+  75%   5904
+  80%   5969
+  90%   6052
+  95%   6052
+  98%   6052
+  99%   6052
+ 100%   6052 (longest request)
+----------------------------------------------------PRUEBA 2------------------------------------------------------------
+12:06:01
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient).....done
+
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /index2.jsp
+Document Length:        623427 bytes
+
+Concurrency Level:      1
+Time taken for tests:   57.926 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      6236190 bytes
+HTML transferred:       6234270 bytes
+Requests per second:    0.17 [#/sec] (mean)
+Time per request:       5792.583 [ms] (mean)
+Time per request:       5792.583 [ms] (mean, across all concurrent requests)
+Transfer rate:          105.13 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53   54   1.1     54      56
+Processing:  5553 5738 221.5   5663    6266
+Waiting:     4877 5064 224.5   4998    5599
+Total:       5608 5793 221.1   5716    6320
+
+Percentage of the requests served within a certain time (ms)
+  50%   5716
+  66%   5803
+  75%   5896
+  80%   5968
+  90%   6320
+  95%   6320
+  98%   6320
+  99%   6320
+ 100%   6320 (longest request)
+----------------------------------------------------PRUEBA 3------------------------------------------------------------
+12:06:59
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient).....done
+
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /index2.jsp
+Document Length:        623426 bytes
+
+Concurrency Level:      1
+Time taken for tests:   57.205 seconds
+Complete requests:      10
+Failed requests:        8
+   (Connect: 0, Receive: 0, Length: 8, Exceptions: 0)
+Total transferred:      6236188 bytes
+HTML transferred:       6234268 bytes
+Requests per second:    0.17 [#/sec] (mean)
+Time per request:       5720.497 [ms] (mean)
+Time per request:       5720.497 [ms] (mean, across all concurrent requests)
+Transfer rate:          106.46 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53   54   0.8     54      55
+Processing:  5402 5667 193.6   5638    6068
+Waiting:     4733 4958 183.5   4937    5403
+Total:       5455 5720 193.7   5692    6122
+
+Percentage of the requests served within a certain time (ms)
+  50%   5692
+  66%   5732
+  75%   5821
+  80%   5931
+  90%   6122
+  95%   6122
+  98%   6122
+  99%   6122
+ 100%   6122 (longest request)
+----------------------------------------------------PRUEBA 4------------------------------------------------------------
+12:07:56
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient).....done
+
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /index2.jsp
+Document Length:        623427 bytes
+
+Concurrency Level:      1
+Time taken for tests:   57.611 seconds
+Complete requests:      10
+Failed requests:        1
+   (Connect: 0, Receive: 0, Length: 1, Exceptions: 0)
+Total transferred:      6236189 bytes
+HTML transferred:       6234269 bytes
+Requests per second:    0.17 [#/sec] (mean)
+Time per request:       5761.080 [ms] (mean)
+Time per request:       5761.080 [ms] (mean, across all concurrent requests)
+Transfer rate:          105.71 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53   54   1.5     54      57
+Processing:  5443 5707 207.5   5728    6155
+Waiting:     4776 5029 210.7   5017    5489
+Total:       5496 5761 207.2   5784    6208
+
+Percentage of the requests served within a certain time (ms)
+  50%   5784
+  66%   5784
+  75%   5847
+  80%   5932
+  90%   6208
+  95%   6208
+  98%   6208
+  99%   6208
+ 100%   6208 (longest request)
+----------------------------------------------------PRUEBA 5------------------------------------------------------------
+12:08:54
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient).....done
+
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /index2.jsp
+Document Length:        623425 bytes
+
+Concurrency Level:      1
+Time taken for tests:   58.180 seconds
+Complete requests:      10
+Failed requests:        9
+   (Connect: 0, Receive: 0, Length: 9, Exceptions: 0)
+Total transferred:      6236188 bytes
+HTML transferred:       6234268 bytes
+Requests per second:    0.17 [#/sec] (mean)
+Time per request:       5817.991 [ms] (mean)
+Time per request:       5817.991 [ms] (mean, across all concurrent requests)
+Transfer rate:          104.68 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       53   94 129.0     54     461
+Processing:  5445 5724 143.9   5738    6025
+Waiting:     4769 5048 146.3   5056    5364
+Total:       5498 5818 254.3   5792    6487
+
+Percentage of the requests served within a certain time (ms)
+  50%   5792
+  66%   5800
+  75%   5805
+  80%   5854
+  90%   6487
+  95%   6487
+  98%   6487
+  99%   6487
+ 100%   6487 (longest request)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ab -c 10 -t 40 -s 40  http://cesi.westeurope.cloudapp.azure.com/index2.jsp
+----------------------------------------------------PRUEBA 1------------------------------------------------------------
+12:09:52
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient)
+
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /index2.jsp
+Document Length:        623428 bytes
+
+Concurrency Level:      10
+Time taken for tests:   44.052 seconds
+Complete requests:      4
+Failed requests:        0
+Total transferred:      2494480 bytes
+HTML transferred:       2493712 bytes
+Requests per second:    0.09 [#/sec] (mean)
+Time per request:       110129.467 [ms] (mean)
+Time per request:       11012.947 [ms] (mean, across all concurrent requests)
+Transfer rate:          55.30 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       54   55   1.4     56      57
+Processing: 27405 36703 6877.8  38052   43997
+Waiting:    26702 36017 6891.1  37350   43330
+Total:      27461 36759 6877.1  38109   44052
+
+Percentage of the requests served within a certain time (ms)
+  50%  38109
+  66%  38109
+  75%  44052
+  80%  44052
+  90%  44052
+  95%  44052
+  98%  44052
+  99%  44052
+ 100%  44052 (longest request)
+----------------------------------------------------PRUEBA 2------------------------------------------------------------
+12:10:36
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient)
+----------------------------------------------------PRUEBA 3------------------------------------------------------------
+12:11:17
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient)
+----------------------------------------------------PRUEBA 4------------------------------------------------------------
+12:11:57
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient)
+----------------------------------------------------PRUEBA 5------------------------------------------------------------
+12:12:37
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient)

@@ -1,0 +1,63 @@
+ab -c 5 -n 20  http://cesi.westeurope.cloudapp.azure.com/
+----------------------------------------------------PRUEBA 1------------------------------------------------------------
+13:37:02
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient)...----------------------------------------------------PRUEBA 2------------------------------------------------------------
+13:37:32
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient)...----------------------------------------------------PRUEBA 3------------------------------------------------------------
+13:38:02
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient)...
+
+Server Software:        
+Server Hostname:        cesi.westeurope.cloudapp.azure.com
+Server Port:            80
+
+Document Path:          /
+Document Length:        643228 bytes
+
+Concurrency Level:      5
+Time taken for tests:   65.102 seconds
+Complete requests:      6
+Failed requests:        0
+Total transferred:      3860520 bytes
+HTML transferred:       3859368 bytes
+Requests per second:    0.09 [#/sec] (mean)
+Time per request:       54251.973 [ms] (mean)
+Time per request:       10850.395 [ms] (mean, across all concurrent requests)
+Transfer rate:          57.91 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       56   56   0.3     56      57
+Processing: 30476 37554 5683.2  38384   46040
+Waiting:    29845 36927 5684.8  37761   45417
+Total:      30533 37610 5683.2  38440   46096
+
+Percentage of the requests served within a certain time (ms)
+  50%  38440
+  66%  38440
+  75%  40816
+  80%  40816
+  90%  46096
+  95%  46096
+  98%  46096
+  99%  46096
+ 100%  46096 (longest request)
+----------------------------------------------------PRUEBA 4------------------------------------------------------------
+13:39:08
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking cesi.westeurope.cloudapp.azure.com (be patient)...
