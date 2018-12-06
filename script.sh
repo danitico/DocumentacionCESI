@@ -7,6 +7,9 @@ do
 	then
 		echo "if"
 		pdflatex $1
+		bibtex documentacion
+		pdflatex $1
+		pdflatex $1
 		v2=$(date -r $1)
 	fi
 	sleep 0.2;

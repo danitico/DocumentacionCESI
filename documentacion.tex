@@ -4,14 +4,12 @@
 % Que tipo de codificacion usa, ...                     %
 %                                                       %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass[11pt,twoside,a4paper]{book}
-
 \usepackage{fancyhdr}
-%\usepackage{fancybox}
-\usepackage{fontenc}
-\usepackage[latin1]{inputenc}
-\usepackage[english,spanish, activeacute]{babel}
+\usepackage{fancybox}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
 \usepackage{amsfonts}
 \usepackage{latexsym}
 \usepackage{graphicx}
@@ -23,94 +21,81 @@
 
 
 \renewcommand{\baselinestretch}{1.2}
-
-
+\title{\Huge Servidor Web Tomcat}
+\author{JosÃ© Manuel Cuevas MuÃ±oz, Daniel Ranchal Parrado, Carlos Romeo MuÃ±oz}
+\date{9 de Diciembre 2018}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                         %
 % Comenzamos el documento %
 %                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
-
-
+\maketitle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Algunos ajustes previos
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\author{José Manuel Soto Hidalgo}
 
-\renewcommand\bibname{Bibliograf'ia}
+\renewcommand\bibname{BibliografÃ­a}
 \renewcommand\tablename{Tabla}
 
 \pagenumbering{arabic} \fancyhf{} \pagestyle{fancy}
-\fancyhead[LO]{\rightmark} % En las páginas impares, parte izquierda del encabezado, aparecerá el nombre de sección
-\fancyhead[RE]{\leftmark} % En las páginas pares, parte derecha del encabezado, aparecerá el nombre de capítulo
-\fancyhead[RO,LE]{\thepage} % Números de página en las esquinas de los encabezados
+\fancyhead[LO]{\rightmark} % En las pginas impares, parte izquierda del encabezado, aparecer el nombre de seccin
+\fancyhead[RE]{\leftmark} % En las pginas pares, parte derecha del encabezado, aparecer el nombre de captulo
+\fancyhead[RO,LE]{\thepage} % Nmeros de pgina en las esquinas de los encabezados
 
-%Aumentamos el tamaño de la cabecera
+%Aumentamos el tamao de la cabecera
 \setlength{\headheight}{14pt}
 
-\renewcommand{\sectionmark}[1]{\markright{{\thesection. #1}}} % Formato para la sección: N.M. Nombre
+\renewcommand{\sectionmark}[1]{\markright{{\thesection. #1}}} % Formato para la seccin: N.M. Nombre
 
 
 
 %%%
-
-EJEMPLO: \\
-En este pequeño ejemplo se trata que veáis cómo funciona latex. Os he creado la estructura de un documento.
-Lo relativo a configuración. Ya es simplemente coger y añadir vuestro trabajo. Y el solo os creará el índice, la bibliografía, etc.
-Necesitáis del fichero \emph{biblio.bib} en formato BibTEX en el que tenéis que añadir las referencias bibliográficas que uséis en el formato específico.
-
-
-%con esto creamos el índice
+%con esto creamos el ndice
 \tableofcontents
-
-
-
 %
 % Contenido TRABAJO
 %
 
-\chapter{Definición del Sistema}
-Definición general del sistema, qué servicios proporcionará y cuales serán sus posibles resultados. Definición de las métricas o índices de rendimiento que se usarán así como los parámetros que puedan afectar.
-
-\section{Objetivos y definición del sistema}
-Se debe de definir claramente qué se pretende y cuál es el sistema, para medirlo exclusivamente. Al definir el sistema se debe indicar configuraciones usadas en la instalación del sistema.
+\chapter{DefiniciÃ³n del Sistema}
+\section{Objetivos y definiciÃ³n del sistema}
+El objetivo que se pretende es hacer pruebas exhaustivas, es decir, hacer un benchmarking para calcular el rendimiento del servicio web Tomcat. Para hacer este tipo de pruebas, se parte de la siguiente informaciÃ³n.
+El sistema operativo bajo el que se estÃ¡n haciendo las pruebas es CentOS, cuyo servidor estÃ¡ alojado en Azure. Para la instalaciÃ³n de Tomcat, se ha utilizado el servicio de virtualizaciÃ³n docker para instalarlo de una manera sencilla. Lo Ãºnico que hay que hacer es mapear el puerto del servidor web de nuestro contenedor al puerto 80 del host. En los archivos adjuntos y en la presentaciÃ³n se harÃ¡ una breve explicaciÃ³n.
 
 \section{Servicios y sus posibles resultados}
-Un sistema puede dar un resultado válido, inválido o simplemente no dar ningún resultado, en cualquier caso, habrá que medir la tasa de sucesos de uno u otro tipo.
+Un sistema puede dar un resultado vlido, invlido o simplemente no dar ningn resultado, en cualquier caso, habr que medir la tasa de sucesos de uno u otro tipo.
 
-\section{Métricas}
-Fijar los criterios para comparar prestaciones. Qué magnitudes vamos a usar.
-
-
-\section{Parámetros}
-Listar los parámetros que puedan afectar a las prestaciones. Las características del sistema serán iguales a igualdad de hardware y software.
+\section{Mtricas}
+Fijar los criterios para comparar prestaciones. Qu magnitudes vamos a usar.
 
 
-\chapter{Evaluación del Sistema}
-Definición de la experimentación a realizar. Qué evaluación se seguirá, cual será la carga de trabajo, qué experimentos se van a realizar y finalmente se analizarán los resultados de la experimentación.
+\section{Parmetros}
+Listar los parmetros que puedan afectar a las prestaciones. Las caractersticas del sistema sern iguales a igualdad de hardware y software.
 
-\section{Técnicas de evaluación}
-Qué técnica de evaluación se seguirá.
+
+\chapter{Evaluacin del Sistema}
+Definicin de la experimentacin a realizar. Qu evaluacin se seguir, cual ser la carga de trabajo, qu experimentos se van a realizar y finalmente se analizarn los resultados de la experimentacin.
+
+\section{Tcnicas de evaluacin}
+Qu tcnica de evaluacin se seguir.
 
 \section{Carga de trabajo}
-Cual será la carga de trabajo, en qué consiste.
+Cual ser la carga de trabajo, en qu consiste.
 
-\section{Diseño de Experimentos}
-Cómo se han diseñado los experimentos. En qué consiste la experimentación a realizar.
+\section{Diseo de Experimentos}
+Cmo se han diseado los experimentos. En qu consiste la experimentacin a realizar.
 
-\section{Análisis de los resultados}
-Estudio y análisis de los resultados provenientes de la experimentación. Tablas y gráficas con los datos (se requiere un número suficiente de muestras resultado de la experimentación)
+\section{Anlisis de los resultados}
+Estudio y anlisis de los resultados provenientes de la experimentacin. Tablas y grficas con los datos (se requiere un nmero suficiente de muestras resultado de la experimentacin)
 
-\chapter{Conclusiones y discusión}
+\chapter{Conclusiones y discusin}
 
-Conclusiones de consecución de objetivos planteados, a los experimentosdesarrollados y crítica final en base al análisis de los datos.
+Conclusiones de consecucin de objetivos planteados, a los experimentosdesarrollados y crtica final en base al anlisis de los datos.
 
 \section{Cuestiones}
-Como conclusión, ¿qué cuestiones más relevantes te plantea el trabajo? Al menos 3 cuestiones junto con su respuesta.
+Como conclusin, qu cuestiones ms relevantes te plantea el trabajo? Al menos 3 cuestiones junto con su respuesta.
 
 
 %% APENDICES
@@ -122,5 +107,5 @@ Como conclusión, ¿qué cuestiones más relevantes te plantea el trabajo? Al menos 
 % BIBLIOGRAFIA
 \bibliography{biblio}
 \bibliographystyle{unsrt}
-
+\cite{KM2000}
 \end{document}
