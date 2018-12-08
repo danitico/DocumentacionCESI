@@ -153,7 +153,11 @@ Esta teoría es afirmada por las gráficas mostradas, donde vemos fácilmente co
 el procesador llega a funcionar a niveles cercanos al 100\% de utilidad durante \
 la duración de las pruebas efectuadas.
 
-METER IMAGEN CPU CHEMA
+\begin{figure}
+   \includegraphics[width=\textwidth]{grafica1.jpg}
+   \caption{Uso de CPU}
+   \label{cpu}
+\end{figure}
 
 Además de esto, otro factor determinante en este caso es el bajo número de \
 transferencias por segundo que el servidor es capaz de aguantar y que está \
@@ -164,7 +168,7 @@ de testear su funcionamiento hemos conocido de primera mano al tener que \
 esperar grandes cantidades de tiempo a que todos los tests fueran completados \
 varias veces con éxito. En cuanto a las peticiones por segundo, casi nunca \
 superan el cuarto de unidad, hecho que no hace más que corroborar las \
-afirmaciones anteriores.
+afirmaciones anteriores. \newline
 
 \begin{figure}
    \includegraphics[width=\textwidth]{grafica1.jpg}
@@ -186,7 +190,7 @@ que estén corriendo en sus servidores, como es nuestro caso, eso por ello por \
 lo que se aprecia esta mejora en el rendimiento, debido a que gran parte de los \
 datos que son necesarios para la ejecución de la prueba, ya están cargados en \
 la caché del servidor y son accesibles de manera mucho más rápida para la \
-siguiente ejecución.
+siguiente ejecución. \newline
 
 Si contemplamos las gráficas \ref{Fig2}, \ref{Fig3} y \ref{Fig4}, no hay gran \
 diferencia entre ellas en cuanto al parámetro de medición, el número de \
@@ -195,22 +199,21 @@ recordemos que estos datos han sido tomados con el monitor sar, mientras que ab 
 era ejecutado, tras ello, se ha realizado la media aritmética de los valores \
 del parámetro interesado que sar tomaba cada 10 segundos durante la ejecución \
 del test. Entonces, podemos ver como apenas hay diferencias significativas \
-entre las ejecuciones, por ejemplo, en la primera gráfica, vemos como \
-normalmente el test de menor concurrencia y menos repeticiones \
+entre las ejecuciones, por ejemplo, en la gráfica \ref{Fig2}, vemos como\
+normalmente el test de menor concurrencia y menos repeticiones\
 (línea amarilla), tarda normalmente menos tiempo que el test con más \
 concurrencia y el doble de repeticiones (línea verde), aunque veamos \
 ejecuciones donde estas posiciones se inviertan, esto se debe más al margen de \
-error que a otra cosa. En cuanto a la gráfica de resultados del mosaico de \
-imágenes pequeñas, observamos como la línea azul, la correspondiente con el uso \
-de https, lo cual es curioso debido a que en las dos últimas pruebas se habían \
-mantenido por debajo, sin embargo, no es de preocupación, ya que no se aprecian \
-diferencias muy significativas en la mayoría de las ejecuciones, sin embargo, \
-vemos como esa línea sube hasta una transferencia por segundo en la segunda \
-ejecución, lo cual es muy significativo.
-
+error que a otra cosa. En cuanto a la gráfica \ref{Fig4}, la referida a los \
+resultados del mosaico de imágenes pequeñas, observamos como la línea azul, \
+la correspondiente con el uso de https, lo cual es curioso debido a que en las \
+dos últimas pruebas se habían mantenido por debajo, sin embargo, no es de \
+preocupación, ya que no se aprecian diferencias muy significativas en la \
+mayoría de las ejecuciones, sin embargo, vemos como esa línea sube hasta una \
+transferencia por segundo en la segunda ejecución, lo cual es muy significativo.
 La imagen general de estas pruebas es que mientras más grandes sean las \
 imágenes del banco de pruebas, menos transferencias por segundo se llevarán a \
-cabo, lo cual es lógico, puesto que son archivos más grandes.
+cabo, lo cual es lógico, puesto que son archivos más grandes. \newline
 
 \begin{figure}
    \includegraphics[width=\textwidth]{grafica2.jpg}
@@ -226,6 +229,44 @@ cabo, lo cual es lógico, puesto que son archivos más grandes.
    \caption{Uso de disco en las cinco ejecuciones con imágenes pequeñas}
    \label{Fig4}
 \end{figure}
+
+Si analizamos ahora el uso de la red del servidor, aquí no tenemos ningún \
+problema de cuello de botella, Azure nos proporciona una velocidad de conexión \
+veloz y estable y no es algo que un administrador de un servidor pequeño como \
+este tenga que preocuparse, por supuesto, mientras más exigente sea el test con \
+la CPU, lo será con el uso de red que éste requerirá, puesto que estamos \
+hablando de un servidor web. \newline
+
+\begin{figure}
+   \includegraphics[width=\textwidth]{grafica4.jpg}%mete aqui tu foto
+   \caption{Uso de Red}
+   \label{Fig5}
+\end{figure}
+
+En conclusión, hemos detectado que nuestro cuello de botella es una CPU que a \
+pesar de ser muy potente en el conjunto de todos sus núcleos, apenas aguantaría \
+un servidor web pequeño como este ante un importante número de peticiones al \
+servidor, esto es debido a que la cuenta de estudiante de Microsoft Azure que \
+estamos empleando para este trabajo solo ofrece un núcleo de procesador, \
+potente, si, pero que flaquea en tareas que involucren una alta concurrencia \
+de peticiones. Y es que ese es el argumento por el cual los procesadores \
+empleados para su uso en servidores de cualquier tipo suelen contar con un \
+gran número de núcleos tanto físicos como lógicos y poder procesar rápidamente \
+todas las peticiones que reciba. En cuanto a la referenciación, sabemos que los \
+resultados aquí mostrados corresponden con los de un servidor de \
+especificaciones limitadas, útil para este propósito, pero de limitado uso, y \
+es que, tras haber ejecutado numerosos bancos de pruebas centrados en multitud \
+de aspectos de un sistema informático, entre ellos Apache Benchmark, hemos \
+encontrado que fácilmente, un ordenador doméstico con todos sus núcleos \
+activados puede sobrepasar fácilmente el rendimiento de este procesador, \
+organizaciones como SPEC tienen precisamente esa función, la de examinar este \
+tipo de equipos informáticos para poder realizar comparativas, lo cual nos es \
+muy útil a la hora de sacar conclusiones sobre el desempeño de este hardware. \
+Por último, hemos de decir, que Microsoft Azure es una útil herramienta para \
+alojar cualquier tipo de servidor o aplicación web y que nos ha sido muy útil \
+para la realización de este trabajo y que, previo pago de la capacidad \
+necesaria, se puede obtener muchísima potencia de cómputo de ella.
+
 
 %\section{Cuestiones}
 
