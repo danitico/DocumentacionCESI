@@ -47,30 +47,54 @@
 %%%
 %con esto creamos el ndice
 \tableofcontents
+\listoffigures
 %
 % Contenido TRABAJO
 %
 
 \chapter{Definición del Sistema}
 \section{Objetivos y definición del sistema}
-El objetivo que se pretende es hacer pruebas exhaustivas, es decir, hacer un benchmarking para calcular el rendimiento del servicio web Tomcat. Para hacer este tipo de pruebas, se parte de la siguiente información.
-El sistema operativo bajo el que se están haciendo las pruebas es CentOS, cuyo servidor está alojado en Azure.
+El objetivo que se pretende es hacer pruebas exhaustivas, es decir, hacer un \
+benchmarking para calcular el rendimiento del servicio web Tomcat. Para hacer\
+este tipo de pruebas, se parte de la siguiente información. El sistema operativo\
+bajo el que se están haciendo las pruebas es CentOS, cuyo servidor está \
+alojado en Azure.
 \newline
-Para la instalación de Tomcat, se ha utilizado el servicio de virtualización docker para instalarlo de una manera sencilla. Para que el host, es decir, el servidor pueda dar el servicio que provee el contenedor de docker, hay que ligar el puerto del contenedor en el que está sirviendo Tomcat con el puerto que nosotros queramos en el host, aunque los autores de este guión y trabajo hemos elegido el 80, el puerto por excelencia para el servidor web.
+Para la instalación de Tomcat, se ha utilizado el servicio de virtualización \
+docker para instalarlo de una manera sencilla. Para que el host, es decir, el \
+servidor pueda dar el servicio que provee el contenedor de docker, hay que ligar\
+el puerto del contenedor en el que está sirviendo Tomcat con el puerto que \
+nosotros queramos en el host, aunque los autores de este guión y trabajo hemos \
+elegido el 80, el puerto por excelencia para el servidor web.
 
 \section{Servicios y sus posibles resultados}
-El servidor web Tomcat nos provee una gran cantidad de utilidades para aprovechar al máximo este mismo. La primera y la más importante es el despliegue de una página web. Tomcat nos permite hacerlo de manera estática, es decir, configurar la aplicación antes de activar este servicio o de manera dinámica, que es lo más utilizado para servidores que están en producción.
+El servidor web Tomcat nos provee una gran cantidad de utilidades para \
+aprovechar al máximo este mismo. La primera y la más importante es el despliegue\
+de una página web. Tomcat nos permite hacerlo de manera estática, es decir, \
+configurar la aplicación antes de activar este servicio o de manera dinámica, \
+que es lo más utilizado para servidores que están en producción.
 \newline
-Para poder realizar esto de una manera sencilla, Tomcat nos da una herramienta llamada "Manager", que cómo se ha comentado antes, se pueden hacer despliegues y eliminación (undeploy) de cualquier aplicación web además de darnos una lista de las aplicaciones que ya están desplegadas.
+Para poder realizar esto de una manera sencilla, Tomcat nos da una herramienta \
+llamada "Manager", que cómo se ha comentado antes, se pueden hacer despliegues \
+y eliminación (undeploy) de cualquier aplicación web además de darnos una lista \
+de las aplicaciones que ya están desplegadas.
 \newline
-Pero las utilidades de "Manager" no son sólo esas, este gestor nos da la opción de poder ver las estadísticas de las sesiones de cualquier aplicación y el estado del servidor. Otra de las funcionalidades que tiene, al igual que el servidor httpd y apache2, es la posibilidad de trabajar con "Virtual Host".
+Pero las utilidades de "Manager" no son sólo esas, este gestor nos da la opción \
+de poder ver las estadísticas de las sesiones de cualquier aplicación y el \
+estado del servidor. Otra de las funcionalidades que tiene, al igual que el \
+servidor httpd y apache2, es la posibilidad de trabajar con "Virtual Host".
 \newline
-Otra característica interesante que nos ofrece Tomcat es la gestión de los usuario y los roles en las distintas aplicaciones web. Esto evita que tengamos una tabla para cada aplicación web que se tenga. En temas de seguridad, Tomcat nos permite la configuración de los certificados SSL/TLS para que nuestra página tenga el protocolo https.
+Otra característica interesante que nos ofrece Tomcat es la gestión de los \
+usuario y los roles en las distintas aplicaciones web. Esto evita que tengamos \
+una tabla para cada aplicación web que se tenga. En temas de seguridad, Tomcat \
+nos permite la configuración de los certificados SSL/TLS para que nuestra \
+página tenga el protocolo https.
 \newline
 Para este experimento, se distinguirán los siguientes resultados:
 
 \begin{itemize}
-  \item \textbf{La carga correcta de las imágenes en un tiempo considerablemente bueno.}
+  \item \textbf{La carga correcta de las imágenes en un tiempo\
+  considerablemente bueno.}
   \item \textbf{La carga correcta de las imágenes en un tiempo pésimo.}
   \item \textbf{La carga parcial de las imágenes.}
   \item \textbf{Fallo del servidor web. Ninguna imágen es servida.}
@@ -78,7 +102,8 @@ Para este experimento, se distinguirán los siguientes resultados:
 
 
 \section{Métricas}
-Para poder medir la eficacia y la actuación del servidor web Tomcat se han considerado los siguientes parámetros a examinar:
+Para poder medir la eficacia y la actuación del servidor web Tomcat se han \
+considerado los siguientes parámetros a examinar:
 
 \begin{itemize}
   \item \textbf{Peticiones por segundo}
@@ -91,7 +116,8 @@ Para poder medir la eficacia y la actuación del servidor web Tomcat se han cons
 
 \pagebreak
 \section{Parámetros}
-Los parámetros que pueden afectar a la medición del rendimiento del servidor web Tomcat son los siguientes:
+Los parámetros que pueden afectar a la medición del rendimiento del servidor \
+web Tomcat son los siguientes:
 
 \begin{itemize}
   \item \textbf{La lejanía con el centro de datos}
@@ -102,8 +128,8 @@ Los parámetros que pueden afectar a la medición del rendimiento del servidor w
 
 Para poder mitigar los efectos que producen estos parámetros,la prueba se ejecutará varias veces y se harán los cáculos oportunos para representar de una manera correcta las estadísticas.
 
-\chapter{Evaluacin del Sistema}
-Definicin de la experimentacin a realizar. Qu evaluacin se seguir, cual ser la carga de trabajo, qu experimentos se van a realizar y finalmente se analizarn los resultados de la experimentacin.
+\chapter{Evaluación del Sistema}
+Definición de la experimentación a realizar. Qu evaluacin se seguir, cual ser la carga de trabajo, qu experimentos se van a realizar y finalmente se analizarn los resultados de la experimentacin.
 
 \section{Tcnicas de evaluacin}
 Qu tcnica de evaluacin se seguir.
@@ -117,13 +143,91 @@ Cmo se han diseado los experimentos. En qu consiste la experimentacin a realizar
 \section{Anlisis de los resultados}
 Estudio y anlisis de los resultados provenientes de la experimentacin. Tablas y grficas con los datos (se requiere un nmero suficiente de muestras resultado de la experimentacin)
 
-\chapter{Conclusiones y discusin}
+\chapter{Conclusiones y discusión}
 
-Conclusiones de consecucin de objetivos planteados, a los experimentosdesarrollados y crtica final en base al anlisis de los datos.
+En primer lugar, se aprecia un fuerte problema en el hardware de este servidor \
+debido al cuello de botella que aparece al ejecutar los bencharmarks en la CPU, \
+esto es fácil de comprender, debido a que la concurrencia toma protagonismo en \
+estos tests, con algunos fijándola en valores como 10 peticiones concurrentes. \
+Esta teoría es afirmada por las gráficas mostradas, donde vemos fácilmente como \
+el procesador llega a funcionar a niveles cercanos al 100\% de utilidad durante \
+la duración de las pruebas efectuadas.
 
-\section{Cuestiones}
-Como conclusin, qu cuestiones ms relevantes te plantea el trabajo? Al menos 3 cuestiones junto con su respuesta.
+METER IMAGEN CPU CHEMA
 
+Además de esto, otro factor determinante en este caso es el bajo número de \
+transferencias por segundo que el servidor es capaz de aguantar y que está \
+fuertemente relacionado con el almacenamiento del mismo en el cual se almacenan \
+las fotografías que sirven como cargas de prueba, el cual en ninguna prueba es \
+capaz de llegar ni tan siquiera a la unidad, y eso es algo que los encargados \
+de testear su funcionamiento hemos conocido de primera mano al tener que \
+esperar grandes cantidades de tiempo a que todos los tests fueran completados \
+varias veces con éxito. En cuanto a las peticiones por segundo, casi nunca \
+superan el cuarto de unidad, hecho que no hace más que corroborar las \
+afirmaciones anteriores.
+
+\begin{figure}
+   \includegraphics[width=\textwidth]{grafica1.jpg}
+   \caption{Transferencias por Segundo, peticiones por segundo \
+   y tiempo empleado en un grupo de peticiones concurrentes.}
+   \label{Fig1}
+\end{figure}
+
+Si contemplamos el gráfico \ref{Fig1}, nos damos cuenta de que el número de \
+peticiones por segundo, al ser un parámetro íntimamente ligado al hardware \
+sobre el que se esté ejecutando el banco de pruebas escogido, apenas varía, \
+puesto que la CPU solo es capaz de ejecutar un número determinado de ellas, \
+siendo todas iguales. Lo interesante de este gráfico, es ver como el tiempo \
+empleado en servir un grupo de peticiones concurrentes decae a lo largo de las \
+cinco ejecuciones del test. Tras indagar en los motivos de este aumento del \
+rendimiento, nos damos cuenta de que Azure es un servicio de computación en la \
+nube que alardea de proveer de una caché inteligente a sus máquinas virtuales \
+que estén corriendo en sus servidores, como es nuestro caso, eso por ello por \
+lo que se aprecia esta mejora en el rendimiento, debido a que gran parte de los \
+datos que son necesarios para la ejecución de la prueba, ya están cargados en \
+la caché del servidor y son accesibles de manera mucho más rápida para la \
+siguiente ejecución.
+
+Si contemplamos las gráficas \ref{Fig2}, \ref{Fig3} y \ref{Fig4}, no hay gran \
+diferencia entre ellas en cuanto al parámetro de medición, el número de \
+transferencias por segundo del disco del servidor. Para analizar las gráficas, \
+recordemos que estos datos han sido tomados con el monitor sar, mientras que ab \
+era ejecutado, tras ello, se ha realizado la media aritmética de los valores \
+del parámetro interesado que sar tomaba cada 10 segundos durante la ejecución \
+del test. Entonces, podemos ver como apenas hay diferencias significativas \
+entre las ejecuciones, por ejemplo, en la primera gráfica, vemos como \
+normalmente el test de menor concurrencia y menos repeticiones \
+(línea amarilla), tarda normalmente menos tiempo que el test con más \
+concurrencia y el doble de repeticiones (línea verde), aunque veamos \
+ejecuciones donde estas posiciones se inviertan, esto se debe más al margen de \
+error que a otra cosa. En cuanto a la gráfica de resultados del mosaico de \
+imágenes pequeñas, observamos como la línea azul, la correspondiente con el uso \
+de https, lo cual es curioso debido a que en las dos últimas pruebas se habían \
+mantenido por debajo, sin embargo, no es de preocupación, ya que no se aprecian \
+diferencias muy significativas en la mayoría de las ejecuciones, sin embargo, \
+vemos como esa línea sube hasta una transferencia por segundo en la segunda \
+ejecución, lo cual es muy significativo.
+
+La imagen general de estas pruebas es que mientras más grandes sean las \
+imágenes del banco de pruebas, menos transferencias por segundo se llevarán a \
+cabo, lo cual es lógico, puesto que son archivos más grandes.
+
+\begin{figure}
+   \includegraphics[width=\textwidth]{grafica2.jpg}
+   \caption{Uso de disco en las cinco ejecuciones con imágenes grandes}
+   \label{Fig2}
+\end{figure}
+\begin{figure}
+   \includegraphics[width=\textwidth]{grafica3.jpg}
+\caption{Uso de disco en las cinco ejecuciones con imágenes medianas}   \label{Fig3}
+\end{figure}
+\begin{figure}
+   \includegraphics[width=\textwidth]{grafica4.jpg}
+   \caption{Uso de disco en las cinco ejecuciones con imágenes pequeñas}
+   \label{Fig4}
+\end{figure}
+
+%\section{Cuestiones}
 
 %% APENDICES
 %\ \newpage
