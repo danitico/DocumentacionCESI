@@ -143,7 +143,7 @@ monitorizar en el lado del servidor a través de sar y el monitor de Azure.\
 Tras realizar esto, sacaremos los datos, tanto del lado del cliente como del\
 servidor, y los analizaremos.
 
-\section{Técnicas de evaluacin}
+\section{Técnicas de evaluación}
 Antes de proceder a describir los resultados, debemos mostrar cuáles fueron las\
 técnicas utilizadas para obtener los resultados del benchmark. Para realizar\
 estas pruebas, hemos hecho uso de Apache benchmark, debido a que es una de las \
@@ -485,13 +485,24 @@ necesaria, se puede obtener muchísima potencia de cómputo de ella.
    estos dos procedimientos, nos hacemos una idea de la potencia que tiene el\
    servidor y su desempeño en una situación real.
 
-  \item \textbf{¿Mi pregunta xd?}\newline
-  ahhhhhh
+  \item \textbf{Teniendo en cuenta todos los datos extraidos del servidor\
+   web, ¿Es rentable y de utilidad Tomcat?}\newline
+   Respecto a la utilidad, Tomcat restringe o más bien, imposibilita aquellas \
+   aplicaciones web que no sean hechas con Java y el lenguaje de marcado html,\
+   y por lo tanto, deja atrás lenguajes útiles para este campo de la informática\
+   como PHP. Respecto a la correcta configuración de Tomcat, es muy fácil y nos\
+   proporciona herramientas ya mencionadas en la memoria. Pero el mayor problema\
+   para utilizar Tomcat en un sistema basado en Linux es la instalación de Java\
+   Virtual Machine, es bastante complicado de instalar y por ello, a lo mejor,\
+   Tomcat no es tán utilizado como nginx, apache2 o httpd.
+   Teniendo en cuenta las características del servidor que sirve Tomcat, es lo\
+   suficientemente bueno para soportar la funcionalidad de los archivos jsp.
+
 \end{itemize}
 
 %% APENDICES
 %\ \newpage
-\appendix
+% \appendix
 
 \renewcommand{\baselinestretch}{1.2}
 
