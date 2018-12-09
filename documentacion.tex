@@ -10,6 +10,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{mathptmx}
 \usepackage{amsfonts}
 \usepackage{latexsym}
 \usepackage{graphicx}
@@ -128,22 +129,87 @@ web Tomcat son los siguientes:
   \item \textbf{Hardware empleado en el servidor}
 \end{itemize}
 
-Para poder mitigar los efectos que producen estos parámetros,la prueba se ejecutará varias veces y se harán los cáculos oportunos para representar de una manera correcta las estadísticas.
+Para poder mitigar los efectos que producen estos parámetros,la prueba se \
+ejecutará varias veces y se harán los cáculos oportunos para representar de \
+una manera correcta las estadísticas.
 
 \chapter{Evaluación del Sistema}
-Definición de la experimentación a realizar. Qu evaluacin se seguir, cual ser la carga de trabajo, qu experimentos se van a realizar y finalmente se analizarn los resultados de la experimentacin.
+Tras el montaje del servidor en Tomcat usando CentOS, procedemos a evaluar el\
+sistema. En general hay muchas técnicas de evaluación posible. En nuestro caso\
+vamos a realizar pruebas con Apache benchmark en el lado del cliente, y a \
+monitorizar en el lado del servidor a través de sar y el monitor de Azure.\
+Tras realizar esto, sacaremos los datos, tanto del lado del cliente como del\
+servidor, y los analizaremos.
 
-\section{Tcnicas de evaluacin}
-Qu tcnica de evaluacin se seguir.
+\section{Técnicas de evaluacin}
+Antes de proceder a describir los resultados, debemos mostrar cuáles fueron las\
+técnicas utilizadas para obtener los resultados del benchmark. Para realizar\
+estas pruebas, hemos hecho uso de Apache benchmark, debido a que es una de las \
+principales utilidades a la hora de realizar benchmarking a un servidor web.\
+Este permite mostrar pruebas con una concurrencia que nos sería difícil de\
+imitar, además de sacar datos muy interesantes, como el tiempo medio de una\
+petición y el número de peticiones del servidor.
+Para sacar los datos hemos utilizado el monitor sar, realizando un monitoreo\
+completo a la vez que sucedían las sucesivas pruebas de Apache benchmark. El\
+monitor sar nos permite sacar datos, tanto de la utilización de CPU, como de\
+red, además de otros muchos datos, los cuales no resaltaremos. Por último,\
+hemos utilizado datos que nos dá el propio Azure a la hora de medir el uso de disco.
+
 
 \section{Carga de trabajo}
-Cual ser la carga de trabajo, en qu consiste.
+Hemos hecho uso de tres cargas distintas de ab. Cada carga se ha realizado con \
+una concurrencia y una cantidad de peticiones distintas, además de que cada una \
+de estas se ha realizado en cinco ocasiones en tres index: uno con fotos \
+grandes, otro con fotos medianas y otro con fotos pequeñas, para comprobar si \
+existen diferencias entre las tres versiones. Las cargas son:
+\begin{itemize}
+  \item \textbf{ab -c 5 -n 20}: Pretende medir la capacidad  del programa a la \
+  hora de tener una concurrencia media y una cantidad de peticiones \
+  moderada/alta.
+  \item \textbf{ab -c 1 -n 10}: Pretende probar el servidor con una cantidad \
+  de peticiones más baja que la anterior prueba, pero sin concurrencia, para \
+  comprobar la diferencia entre una prueba con concurrencia o sin ella.
+  \item \textbf{ab -c 10 -t 40 -s 40}: Pretende probar el servidor con una \
+  concurrencia alta en un tiempo, dándonos, por ejemplo, el número de \
+  peticiones que puede realizar el servidor en x segundos.
+\end{itemize}
 
-\section{Diseo de Experimentos}
-Cmo se han diseado los experimentos. En qu consiste la experimentacin a realizar.
+\section{Diseño de Experimentos}
+Para realizar estos experimentos he creado un script que realiza en cinco\
+ocasiones las pruebas anteriormente nombradas para cada tamaño de imagen. A su \
+vez, el monitor sar está corriendo en el servidor y guardándolo en un fichero.\
+Para mostrar gráficamente los resultados de estas pruebas se hace uso de gnuplot.
 
-\section{Anlisis de los resultados}
-Estudio y anlisis de los resultados provenientes de la experimentacin. Tablas y grficas con los datos (se requiere un nmero suficiente de muestras resultado de la experimentacin)
+\section{Análisis de los resultados}
+Tras realizar ab y a los tres index con las distintas cargas podemos proceder a\
+mostrar sus datos. Los primeros datos que nos resultarían interesantes serían\
+los del propio Apache benchmark.
+Los primeros datos que podemos mirar son los que nos da el propio apache\
+benchmark. Estos datos, obtenidos de la propia salida del comando “ab” son \
+los siguientes. De la primera prueba se extrae lo siguiente:
+
+\begin{center}
+\small
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c| }
+ \hline
+  & \multicolumn{3}{|c}{Pequeños} & \multicolumn{3}{|c|}{Medianos} & \multicolumn{3}{|c|}{Grandes} \\
+ \hline
+ Ejecución & Pet/s & ms/Petición & Total(s) \
+ & Pet/s & ms/Petición & Total(s) &\
+ Pet/s & ms/Petición & Total(s) \\
+ \hline
+ 1 & 0.17 & 28875.345 & cell3 & cell3 & cell3 & cell3 & cell3 & cell3 & cell3 \\
+ \hline
+ 2 & 0.17 & 29610.067 & cell3 & cell3 & cell3 & cell3 & cell3 & cell3 & cell3 \\
+ \hline
+ 3 & 0.17 & 29360.455 & cell3 & cell3 & cell3 & cell3 & cell3 & cell3 & cell3 \\
+ \hline
+ 4 & 0.17 & 29445.476 & cell3 & cell3 & cell3 & cell3 & cell3 & cell3 & cell3 \\
+ \hline
+ 5 & 0.16 & 28917.908 & cell3 & cell3 & cell3 & cell3 & cell3 & cell3 & cell3 \\
+ \hline
+\end{tabular}
+\end{center}
 
 \chapter{Conclusiones y discusión}
 
@@ -293,8 +359,7 @@ alojar cualquier tipo de servidor o aplicación web y que nos ha sido muy útil 
 para la realización de este trabajo y que, previo pago de la capacidad \
 necesaria, se puede obtener muchísima potencia de cómputo de ella.
 
-
-%\section{Cuestiones}
+\section{Cuestiones}
 
 %% APENDICES
 %\ \newpage
@@ -305,5 +370,5 @@ necesaria, se puede obtener muchísima potencia de cómputo de ella.
 % BIBLIOGRAFIA
 \bibliography{biblio}
 \bibliographystyle{unsrt}
-\cite{KM2000}
+\nocite{*}
 \end{document}
